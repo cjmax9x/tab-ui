@@ -1,0 +1,81 @@
+*{ 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.heading{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.header{
+    padding: 16px 20px 11px 20px;
+    font-size: 22px;
+    color: #CB5470;
+    border-bottom: 4px solid transparent;
+}
+.tab-icon  {
+    color: #F7BACF;
+}
+
+.tab-icon--active{
+    color: #C23564;
+}
+.header:hover{
+    color:black ;
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+    cursor: pointer;
+}
+.header--active{
+    color: black;
+}
+
+.content-container{
+    display: flex;
+    justify-content: center;
+    font-size:24px;
+}
+.content{
+    width: 600px;
+    display: none;
+}
+
+.content--active{
+    display: block;
+}
+.line{
+    position: absolute;
+    height: 6px;
+    background-color: #C23564;
+    width: 0;
+    border-radius: 15px;
+    left: 100px;
+    bottom: 0;
+    transition: all 0.7s ease;
+}
+.btn{
+    position: absolute;
+    left: 50%;
+    top: -160%;
+    font-size: 40px;
+    transform: translateX(-50%);
+    padding: 6px;
+    display: none;
+}
+.btn--active{
+    display: block;
+    transition: all 5s ease;
+    animation: ease appear 5s ;
+
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
